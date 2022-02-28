@@ -95,6 +95,12 @@ function createTeam() {
         teamArray.push(engineer);
         console.log(teamArray);
       }
+
+      if (employeeInput.role === 'Intern') {
+        const intern = new Intern(name, id, email, school);
+        teamArray.push(intern);
+        console.log(teamArray);
+      }
     });
 }
 
