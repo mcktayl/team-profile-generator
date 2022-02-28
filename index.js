@@ -93,12 +93,16 @@ function createTeam() {
       if (employeeInput.role === 'Engineer') {
         const engineer = new Engineer(name, id, email, github);
         teamArray.push(engineer);
-        console.log(teamArray);
       }
 
       if (employeeInput.role === 'Intern') {
         const intern = new Intern(name, id, email, school);
         teamArray.push(intern);
+      }
+
+      if (employeeInput.addMore) {
+        createTeam();
+      } else {
         console.log(teamArray);
       }
     });
