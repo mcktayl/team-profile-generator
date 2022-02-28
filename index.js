@@ -38,7 +38,8 @@ function createManager() {
 
       const manager = new Manager(name, id, email, officeNumber);
       teamArray.push(manager);
-      console.log(teamArray);
+
+      createTeam();
     });
 }
 
@@ -48,6 +49,7 @@ function createTeam() {
       {
         type: 'list',
         name: 'role',
+        message: "What is this employee's role?",
         choices: ['Engineer', 'Intern'],
       },
       {
@@ -108,4 +110,8 @@ function createTeam() {
     });
 }
 
-createTeam();
+function initApp() {
+  createManager();
+}
+
+initApp();
